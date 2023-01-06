@@ -18,6 +18,7 @@ def create_user(fname,lname, email, password):
     
 def find_user(email):
     user = User.query.filter(User.email == email).first()
+    print(user)
     return user
 
 def create_suggestions(name, details, types):

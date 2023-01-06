@@ -7,12 +7,30 @@
 <!-- <h1> Welcome {{name.title()}}, here are some date ideas</h1> -->
 
 <div class = "wrapper2" >
+    
  <div>
     <h1> Welcome {{name.title()}}, here are some date ideas</h1>
 </div>
+{%if session["location"] == None%}
+<form action="/homepage" class="location" method = "post">
+    <div class="form-example">
+        <label for="name">Choose a location: </label>
+        <div id = "city-lookup">
+        <input type="text" name="location" id="location" placeholder="City, State" 
+        required>
+        
+        <button id = "search" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</form>
+{%else%}
+<h2> in {{session["location"]}}</h2>
+{% endif %}
+
 <div class = choices-container id = "containre">
     <div class = "form-comtainer choice-container" >
-        <form  action = "/picnic">
+        <form  action = "/picnic" method="post">
+            <input type="hidden" class="search" name = "term" value="parks">
             <h2>Picnic</h2>
             <button> Click Here</button>
         </form> 
@@ -20,7 +38,8 @@
     </div>
 
     <div class = "form-comtainer choice-container" >
-        <form  action = "/restaurant">
+        <form  action = "/restaurant" method="post">
+            <input type="hidden" class="search" name = "term" value="restaurants">
             <h2>Restaurant</h2>
             <button> Click Here</button>
         </form> 
@@ -36,15 +55,18 @@
     </div>
 
     <div class = "form-comtainer choice-container" >
-        <form  action = "/bars">
-            <h2>Bars</h2>
+        <form  action = "/bars" method="post">
+            <input type="hidden" class="search" name = "term" value="bars" />
+            <h2>bars</h2>
             <button> Click Here</button>
         </form> 
+
     
     </div>
 
     <div class = "form-comtainer choice-container" >
-        <form  action = "/museums">
+        <form  action = "/museums" method="post">
+            <input type="hidden" class="search" name = "term" value="museums" />
             <h2>Museums</h2>
             <button> Click Here</button>
         </form> 

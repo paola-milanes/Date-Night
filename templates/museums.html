@@ -3,10 +3,25 @@
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-<div class = "wrapper2" >
+<div class = "wrapper" >
     <div>
-       <h1> here are some museums near the area</h1>
-   </div>
-
-
+           <h1> here are some museums in {{location}}</h1>
+           {% for place in session["list"]%}
+    
+           <p>{{places[place]["name"]}}</p>
+           <p>{{places[place]["city"]}}</p>
+           <p>{{places[place]["state"]}}</p>
+           <img src='{{places[place]["img"]}}'alt='{{places[place]["name"]}}''>
+           <p>{{places[place]["rvw count"]}}</p>
+           <p>{{places[place]["rating"]}}</p>
+           <p>{{places[place]["phone"]}}</p>
+           <p>{{places[place]["closed"]}}</p>
+           
+                
+           {%endfor%}
+           
+    </div>
+    
+            
+        <div 
 {% endblock %}

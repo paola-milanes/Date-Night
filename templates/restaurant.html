@@ -7,23 +7,25 @@
 <div>
        <h1> here are some restaurants in {{location}}</h1>
        {% for place in session["list"]%}
-       <img src='{{places[place]["img"]}}'alt='{{places[place]["name"]}}''>
        <p>{{places[place]["name"]}}</p>
-       <p>{{places[place]["city"]}},{{places[place]["state"]}} </p>
-       
-       
-       <p>{{places[place]["rvw count"]}}</p>
-       <p>{{places[place]["rating"]}}</p>
+       <img src='{{places[place]["img"]}}'alt='{{places[place]["name"]}}'>
+       <!-- <p>{{places[place]["name"]}}</p> -->
+       <p>{{places[place]["city"]}}, {{places[place]["state"]}} </p>
+       {% for num in range(places[place]["rating"]|int)%}
+       <span class="fa fa-star checked"></span>
+       {% endfor%}
+       {% for i in  range(5 - places[place]["rating"]|int) %}
+       <span class="fa fa-star"></span> (<small>{{places[place]["rvw count"]}}</small>)
+       {% endfor %}
+
        <p>{{places[place]["phone"]}}</p>
        <p>{{places[place]["closed"]}}</p>
        
             
        {%endfor%}
-       
+    
 </div>
 
-        
-    <div 
     
                 
             

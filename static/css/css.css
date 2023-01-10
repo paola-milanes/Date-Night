@@ -13,7 +13,7 @@
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
+	/* height: 100vh; */
 	/* margin: -20px 0 50px; */
 }
 .wrapper2 {
@@ -284,13 +284,46 @@ footer a {
     text-decoration: none;
 }
 
+img{
+ border-radius: 3px;   
+ width: 400px
+}
+.location{
+    background: rgb(255, 231, 231);
+}
+.search-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+#search input[type=text] {
 
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;
+      
+}
+#search{
 
-
-
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      
+}
+#city-lookup{
+    display: flex;
+}
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: rgb(255, 231, 231);
+    background: rgb(255, 231, 231);
     overflow: hidden;
   }
   
@@ -322,3 +355,9 @@ footer a {
         padding: 30px;
         margin-bottom: 30px;
     }
+
+      .fa-star.checked{
+        color: pink;
+        /* border: solid 1px black; */
+      }
+      

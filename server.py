@@ -99,12 +99,50 @@ def picnic():
 
     return render_template("picnic.html", parks = parks,  places = session['list'],location = session['location'])
 
+# @app.route("/restaurant", methods = ["POST"])
+# def restaurant():
+#     """"route to parks to reastaurants nearby"""
+#     session['list'] = {}
+#     session["term"] = request.form.get('term')
+#     # print(session["term"])
+#     location = session["location"]
+#     # print(session['location'],"\n\n\n")
+#     restaurant = yelp.find_business(session["term"], location = location)
+#     # print(restaurant["businesses"][0].keys(), "\n\n\n\n")
+
+#     if 'businesses' not in restaurant:
+#         flash('invalid City, Please try again')
+#         return redirect('/homepage')
+
+#     else:
+#         for place in restaurant['businesses']:
+#             # print("THIS IS PLACES", restaurant['businesses'])
+#             session['list'][place['id']] = {}
+#             session['list'][place['id']]['name'] =[place][0]["name"]
+#             session['list'][place['id']]['id'] =[place][0]["id"]
+#             session['list'][place['id']]['city'] =[place][0]["location"]['city']
+#             session['list'][place['id']]['state'] =[place][0]["location"]['state']
+#             session['list'][place['id']]['img'] =[place][0]['image_url']
+#             session['list'][place['id']]['rvw count'] =[place][0]['review_count']
+#             session['list'][place['id']]['rating'] =[place][0]['rating']
+#             session['list'][place['id']]['categories'] =[place][0]['categories']
+#             session['list'][place['id']]['rating'] =[place][0]['rating']
+#             session['list'][place['id']]['phone'] =[place][0]['display_phone']
+#             session['list'][place['id']]['cordinates'] =[place][0]['coordinates']
+#             session['list'][place['id']]['closed'] =[place][0]['is_closed']
+#             session['list'][place['id']]['price'] =[place][0].get('price','Not available')
+#             print(session['list'])
+            
+        
+
+#     return render_template("restaurant.html", places = session['list'],location = session['location'])
+
 @app.route("/restaurant", methods = ["POST"])
 def restaurant():
     """"route to parks to reastaurants nearby"""
     session['list'] = {}
     session["term"] = request.form.get('term')
-    print(session["term"])
+    # print(session["term"])
     location = session["location"]
     # print(session['location'],"\n\n\n")
     restaurant = yelp.find_business(session["term"], location = location)
@@ -135,9 +173,7 @@ def restaurant():
             
         
 
-    return render_template("restaurant.html", restaurant = restaurant, places = session['list'],location = session['location'])
-
-
+    return render_template("restaurant.html", places = session['list'],location = session['location'])
 @app.route("/movies")
 def movies():
     """"movies palying in the area"""

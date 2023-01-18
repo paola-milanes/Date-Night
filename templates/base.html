@@ -27,8 +27,29 @@
 
 </head>
 <body>
+
+<div class = "box">
     {% block content %}CONTENT HERE{% endblock %}
-    <script src="static/js/style.js"></script>
+
+    <div id = 'map_side'>
+        <section class = 'map'>
+            <div id='map'></div>
+        </section>
+        
+        <div id="sidebar"></div>
+        <div id = 'dir'></div>
+    </div>
+    
+    
+    <script src="/static/js/maps.js"></script>
+    <script
+         async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6RD6DyM1gAfngaDFhVxdTSHovyuacjZA&callback=initMap">
+    </script>
+    
+    </div>
+    
+</div>
 
 </body>
 </html>

@@ -13,8 +13,11 @@
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	/* height: 100vh; */
+	height: 740px;
+    overflow: auto;
 	/* margin: -20px 0 50px; */
+    flex: 3 1 0;
+    /* scroll-margin-block-end: inherit; */
 }
 .wrapper2 {
 	/* background: #f6f5f7; */
@@ -24,7 +27,7 @@
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 199vh;
+	/* height: 199vh; */
 	/* margin: -20px 0 50px; */
 }
 
@@ -286,7 +289,7 @@ footer a {
 
 img{
  border-radius: 3px;   
- width: 400px
+ width: 200px
 }
 .location{
     background: rgb(255, 231, 231);
@@ -360,4 +363,27 @@ img{
         color: pink;
         /* border: solid 1px black; */
       }
-      
+    .photos{
+        max-width: 300px;
+        max-height: 300px;
+        overflow: auto;
+    }
+    .map, #map{
+        width: 500px;
+        height: 740px;
+        flex: 1 1 0;
+
+
+    
+    }
+
+    .box{
+        display: flex;
+        height: 740px;
+        /* float: right; */
+        /* flex: 3 1 0; */
+        
+    }
+
+
+ 

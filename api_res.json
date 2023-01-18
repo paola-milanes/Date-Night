@@ -1,0 +1,900 @@
+[
+    {
+        "id": "MDUTzHrSM5bsoXcCd8V4cQ",
+        "alias": "egghead-sando-cafe-san-jose-3",
+        "name": "Egghead Sando Cafe",
+        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/4FzGVYymK-6pS-N1XqIX0A/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/egghead-sando-cafe-san-jose-3?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 39,
+        "categories": [
+            {
+                "alias": "breakfast_brunch",
+                "title": "Breakfast & Brunch"
+            },
+            {
+                "alias": "coffee",
+                "title": "Coffee & Tea"
+            },
+            {
+                "alias": "sandwiches",
+                "title": "Sandwiches"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.334825,
+            "longitude": -121.889314
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "80 S 1st",
+            "address2": null,
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95113",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "80 S 1st",
+                "San Jose, CA 95113"
+            ]
+        },
+        "phone": "+14082179200",
+        "display_phone": "(408) 217-9200",
+        "distance": 2067.698625758288
+    },
+    {
+        "id": "ei4XVgPdzTr0qL3vjFHohQ",
+        "alias": "tp-banh-bao-5-san-jose",
+        "name": "TP Banh Bao 5",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/sEki90QMtsFgccSUugDtWg/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/tp-banh-bao-5-san-jose?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 31,
+        "categories": [
+            {
+                "alias": "vietnamese",
+                "title": "Vietnamese"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.331713,
+            "longitude": -121.856797
+        },
+        "transactions": [],
+        "location": {
+            "address1": "999 Story Rd",
+            "address2": "Ste 9015",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95122",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "999 Story Rd",
+                "Ste 9015",
+                "San Jose, CA 95122"
+            ]
+        },
+        "phone": "+16508899768",
+        "display_phone": "(650) 889-9768",
+        "distance": 3027.8232647856576
+    },
+    {
+        "id": "mC4pBO7JKYdM-ks2BAk_Uw",
+        "alias": "a-sack-of-potatoes-san-jose-2",
+        "name": "A Sack Of Potatoes",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/amF4BRAaj0EPDfaSCmMxiQ/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/a-sack-of-potatoes-san-jose-2?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 69,
+        "categories": [
+            {
+                "alias": "bubbletea",
+                "title": "Bubble Tea"
+            }
+        ],
+        "rating": 4.0,
+        "coordinates": {
+            "latitude": 37.33224,
+            "longitude": -121.85885
+        },
+        "transactions": [],
+        "price": "$$",
+        "location": {
+            "address1": "929 Story Rd",
+            "address2": "Ste 2024",
+            "address3": null,
+            "city": "San Jose",
+            "zip_code": "95122",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "929 Story Rd",
+                "Ste 2024",
+                "San Jose, CA 95122"
+            ]
+        },
+        "phone": "+14082160562",
+        "display_phone": "(408) 216-0562",
+        "distance": 2906.236320644492
+    },
+    {
+        "id": "UPjhJoqpbJr0u8mvTOxneQ",
+        "alias": "sj-omogari-san-jose-3",
+        "name": "SJ Omogari",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Q-R5F0ZyM0STS_r03pI_WQ/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/sj-omogari-san-jose-3?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 2341,
+        "categories": [
+            {
+                "alias": "korean",
+                "title": "Korean"
+            },
+            {
+                "alias": "soup",
+                "title": "Soup"
+            },
+            {
+                "alias": "seafood",
+                "title": "Seafood"
+            }
+        ],
+        "rating": 4.0,
+        "coordinates": {
+            "latitude": 37.348433,
+            "longitude": -121.895124
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "154 Jackson St",
+            "address2": "",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95112",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "154 Jackson St",
+                "San Jose, CA 95112"
+            ]
+        },
+        "phone": "+14082888134",
+        "display_phone": "(408) 288-8134",
+        "distance": 3662.3762013875817
+    },
+    {
+        "id": "36Q6_2TYOAjflsFAdEnmUg",
+        "alias": "fugetsu-san-jose-san-jose-2",
+        "name": "Fugetsu - San Jose",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/pjXKi0Z0PWp7npE_Z4oyiQ/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/fugetsu-san-jose-san-jose-2?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 162,
+        "categories": [
+            {
+                "alias": "teppanyaki",
+                "title": "Teppanyaki"
+            },
+            {
+                "alias": "delis",
+                "title": "Delis"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.3156752,
+            "longitude": -121.9783166
+        },
+        "transactions": [],
+        "price": "$$",
+        "location": {
+            "address1": "4342 Moorpark Ave",
+            "address2": "Ste 20",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95129",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "4342 Moorpark Ave",
+                "Ste 20",
+                "San Jose, CA 95129"
+            ]
+        },
+        "phone": "",
+        "display_phone": "",
+        "distance": 8246.548810101045
+    },
+    {
+        "id": "sQ-pusH9CvMo9cXW6HWErQ",
+        "alias": "egghead-sando-cafe-san-jose-2",
+        "name": "Egghead Sando Cafe",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/SEOr92BKmxOXuo6AmVBiSw/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/egghead-sando-cafe-san-jose-2?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 190,
+        "categories": [
+            {
+                "alias": "sandwiches",
+                "title": "Sandwiches"
+            },
+            {
+                "alias": "breakfast_brunch",
+                "title": "Breakfast & Brunch"
+            },
+            {
+                "alias": "coffee",
+                "title": "Coffee & Tea"
+            }
+        ],
+        "rating": 4.0,
+        "coordinates": {
+            "latitude": 37.275392,
+            "longitude": -121.8530587
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "519 W Capitol Expy",
+            "address2": "",
+            "address3": null,
+            "city": "San Jose",
+            "zip_code": "95136",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "519 W Capitol Expy",
+                "San Jose, CA 95136"
+            ]
+        },
+        "phone": "+14086228717",
+        "display_phone": "(408) 622-8717",
+        "distance": 5375.257835397549
+    },
+    {
+        "id": "hFf1M3QLSp7gOsSX5btixw",
+        "alias": "serious-dumpling-\u6b63\u7ecf\u751f\u714e-san-jose",
+        "name": "Serious Dumpling \u6b63\u7ecf\u751f\u714e",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1tNYt0LownSmbwdKZz-Ajg/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/serious-dumpling-%E6%AD%A3%E7%BB%8F%E7%94%9F%E7%85%8E-san-jose?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 326,
+        "categories": [
+            {
+                "alias": "dimsum",
+                "title": "Dim Sum"
+            },
+            {
+                "alias": "noodles",
+                "title": "Noodles"
+            },
+            {
+                "alias": "asianfusion",
+                "title": "Asian Fusion"
+            }
+        ],
+        "rating": 4.0,
+        "coordinates": {
+            "latitude": 37.3359871,
+            "longitude": -121.8935321
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "49 North San Pedro St",
+            "address2": null,
+            "address3": null,
+            "city": "San Jose",
+            "zip_code": "95110",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "49 North San Pedro St",
+                "San Jose, CA 95110"
+            ]
+        },
+        "phone": "+14083202023",
+        "display_phone": "(408) 320-2023",
+        "distance": 2294.3698796654476
+    },
+    {
+        "id": "7ceIMCOf_W2OVvt3E9cZLQ",
+        "alias": "los-gatos-meats-and-smokehouse-los-gatos",
+        "name": "Los Gatos Meats & Smokehouse",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/hUGUaFz9846kGHRZnuwtbg/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/los-gatos-meats-and-smokehouse-los-gatos?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 880,
+        "categories": [
+            {
+                "alias": "smokehouse",
+                "title": "Smokehouse"
+            },
+            {
+                "alias": "butcher",
+                "title": "Butcher"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.23272,
+            "longitude": -121.97779
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "575 University Ave",
+            "address2": "",
+            "address3": "",
+            "city": "Los Gatos",
+            "zip_code": "95032",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "575 University Ave",
+                "Los Gatos, CA 95032"
+            ]
+        },
+        "phone": "+14083547055",
+        "display_phone": "(408) 354-7055",
+        "distance": 12409.707021084712
+    },
+    {
+        "id": "Jd4eUYdVXEawq7bMSgL6Yw",
+        "alias": "nakama-san-jose",
+        "name": "Nakama",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/caq_PBetSawWbukjuAS3ug/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/nakama-san-jose?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 11,
+        "categories": [
+            {
+                "alias": "sandwiches",
+                "title": "Sandwiches"
+            },
+            {
+                "alias": "japanese",
+                "title": "Japanese"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.328704066140446,
+            "longitude": -121.83526248586251
+        },
+        "transactions": [],
+        "location": {
+            "address1": "",
+            "address2": "",
+            "address3": null,
+            "city": "San Jose",
+            "zip_code": "95122",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "San Jose, CA 95122"
+            ]
+        },
+        "phone": "+14083894309",
+        "display_phone": "(408) 389-4309",
+        "distance": 4609.283177426327
+    },
+    {
+        "id": "BwCVx1z-W0foNZHfsBKmzw",
+        "alias": "santo-market-san-jose-3",
+        "name": "Santo Market",
+        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/eoyL7blyIb9o7wz7nuG7sw/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/santo-market-san-jose-3?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 648,
+        "categories": [
+            {
+                "alias": "delis",
+                "title": "Delis"
+            },
+            {
+                "alias": "intlgrocery",
+                "title": "International Grocery"
+            },
+            {
+                "alias": "sandwiches",
+                "title": "Sandwiches"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.35171,
+            "longitude": -121.89533
+        },
+        "transactions": [
+            "delivery"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "245 E Taylor St",
+            "address2": "",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95112",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "245 E Taylor St",
+                "San Jose, CA 95112"
+            ]
+        },
+        "phone": "+14082955406",
+        "display_phone": "(408) 295-5406",
+        "distance": 4020.1881137659702
+    },
+    {
+        "id": "uWNbv3gXqklase3raQydzg",
+        "alias": "shin-s-tofu-san-jose",
+        "name": "Shin\u2019s Tofu",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/19KXh__zykkULuKoMcg5gA/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/shin-s-tofu-san-jose?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 103,
+        "categories": [
+            {
+                "alias": "korean",
+                "title": "Korean"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.38753,
+            "longitude": -121.88725
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "1701 Lundy Ave",
+            "address2": "",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95131",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "1701 Lundy Ave",
+                "San Jose, CA 95131"
+            ]
+        },
+        "phone": "+16504772859",
+        "display_phone": "(650) 477-2859",
+        "distance": 7861.735503885235
+    },
+    {
+        "id": "VcOYN87nNxEAuTyevhOqdA",
+        "alias": "modak-korean-chicken-san-jose-3",
+        "name": "MoDak Korean Chicken",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/GG97sWWfodmpzsYgVjxNkA/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/modak-korean-chicken-san-jose-3?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 76,
+        "categories": [
+            {
+                "alias": "korean",
+                "title": "Korean"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.31986,
+            "longitude": -121.97318
+        },
+        "transactions": [
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "405 Saratoga Ave",
+            "address2": "Ste 20",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95129",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "405 Saratoga Ave",
+                "Ste 20",
+                "San Jose, CA 95129"
+            ]
+        },
+        "phone": "+14084904019",
+        "display_phone": "(408) 490-4019",
+        "distance": 7788.4841100855
+    },
+    {
+        "id": "P-pozw-eEpsyos3WlVowuw",
+        "alias": "shihlin-taiwan-street-snacks-san-jose-3",
+        "name": "Shihlin Taiwan Street Snacks",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/BNf-lzF_O9vdW7FUi0Zsnw/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/shihlin-taiwan-street-snacks-san-jose-3?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 43,
+        "categories": [
+            {
+                "alias": "hotdogs",
+                "title": "Fast Food"
+            },
+            {
+                "alias": "taiwanese",
+                "title": "Taiwanese"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.36962908109842,
+            "longitude": -121.88024953168818
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "1477 Berryessa Rd",
+            "address2": "Ste30",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95133",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "1477 Berryessa Rd",
+                "Ste30",
+                "San Jose, CA 95133"
+            ]
+        },
+        "phone": "+14084904590",
+        "display_phone": "(408) 490-4590",
+        "distance": 5925.122314006497
+    },
+    {
+        "id": "bvkEjlV5-4VLmmNLtl53zg",
+        "alias": "\u56db\u59d0-special-noodle-san-jose",
+        "name": "\u56db\u59d0 Special Noodle",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/VqegBzaI4edaVrsi931PKQ/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/%E5%9B%9B%E5%A7%90-special-noodle-san-jose?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 172,
+        "categories": [
+            {
+                "alias": "dimsum",
+                "title": "Dim Sum"
+            },
+            {
+                "alias": "tapasmallplates",
+                "title": "Tapas/Small Plates"
+            },
+            {
+                "alias": "ramen",
+                "title": "Ramen"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.29579,
+            "longitude": -122.03142
+        },
+        "transactions": [],
+        "price": "$$",
+        "location": {
+            "address1": "1530 S De Anza Blvd",
+            "address2": null,
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95129",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "1530 S De Anza Blvd",
+                "San Jose, CA 95129"
+            ]
+        },
+        "phone": "+14083201966",
+        "display_phone": "(408) 320-1966",
+        "distance": 13167.646785180003
+    },
+    {
+        "id": "tLykGDFpjuzbZWy5NYACmA",
+        "alias": "chick-n-bros-san-jose-15",
+        "name": "Chick N' Bros",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/wwlgunKyDvWEKJFn9DfNjA/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/chick-n-bros-san-jose-15?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 1091,
+        "categories": [
+            {
+                "alias": "foodtrucks",
+                "title": "Food Trucks"
+            },
+            {
+                "alias": "sandwiches",
+                "title": "Sandwiches"
+            },
+            {
+                "alias": "burgers",
+                "title": "Burgers"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.323079710915756,
+            "longitude": -121.953999
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "3242 Stevens Creek Blvd",
+            "address2": null,
+            "address3": null,
+            "city": "San Jose ",
+            "zip_code": "95117",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "3242 Stevens Creek Blvd",
+                "San Jose , CA 95117"
+            ]
+        },
+        "phone": "+14086417617",
+        "display_phone": "(408) 641-7617",
+        "distance": 6139.271451303293
+    },
+    {
+        "id": "TANWKEUxyZvNnWu_Yv0ARg",
+        "alias": "the-breakfast-club-san-jose",
+        "name": "The Breakfast Club",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Yhf4z3CgYtlZNMyctn6tOw/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/the-breakfast-club-san-jose?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 3472,
+        "categories": [
+            {
+                "alias": "breakfast_brunch",
+                "title": "Breakfast & Brunch"
+            },
+            {
+                "alias": "waffles",
+                "title": "Waffles"
+            },
+            {
+                "alias": "tradamerican",
+                "title": "American (Traditional)"
+            }
+        ],
+        "rating": 4.0,
+        "coordinates": {
+            "latitude": 37.323197697534354,
+            "longitude": -121.9150064
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "1432 W San Carlos St",
+            "address2": "Ste 80",
+            "address3": null,
+            "city": "San Jose",
+            "zip_code": "95126",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "1432 W San Carlos St",
+                "Ste 80",
+                "San Jose, CA 95126"
+            ]
+        },
+        "phone": "+14085647150",
+        "display_phone": "(408) 564-7150",
+        "distance": 2750.5165827161686
+    },
+    {
+        "id": "2sT_QypID8fH2nbnvNeFoQ",
+        "alias": "el-halal-amigos-san-jose-3",
+        "name": "El Halal Amigos",
+        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/SKmuMwl4Hqnm2Rj-U2FG1Q/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/el-halal-amigos-san-jose-3?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 359,
+        "categories": [
+            {
+                "alias": "foodtrucks",
+                "title": "Food Trucks"
+            },
+            {
+                "alias": "halal",
+                "title": "Halal"
+            },
+            {
+                "alias": "mexican",
+                "title": "Mexican"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.3081918,
+            "longitude": -121.9006145
+        },
+        "transactions": [],
+        "price": "$$",
+        "location": {
+            "address1": "1100 Lincoln Ave",
+            "address2": null,
+            "address3": null,
+            "city": "San Jose",
+            "zip_code": "94536",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "1100 Lincoln Ave",
+                "San Jose, CA 94536"
+            ]
+        },
+        "phone": "+14086455571",
+        "display_phone": "(408) 645-5571",
+        "distance": 1655.072480833138
+    },
+    {
+        "id": "G3VfjTqSd3DerCvEwoElZg",
+        "alias": "jora-peruvian-food-san-jose",
+        "name": "Jora Peruvian food",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/9bD7b1JAG9frg32CaoxLtw/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/jora-peruvian-food-san-jose?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 187,
+        "categories": [
+            {
+                "alias": "peruvian",
+                "title": "Peruvian"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.336395,
+            "longitude": -121.894904
+        },
+        "transactions": [
+            "delivery",
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "100 N Almaden Ave",
+            "address2": "Ste 173",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95110",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "100 N Almaden Ave",
+                "Ste 173",
+                "San Jose, CA 95110"
+            ]
+        },
+        "phone": "+14083202189",
+        "display_phone": "(408) 320-2189",
+        "distance": 2378.900197200929
+    },
+    {
+        "id": "Eeu4qWsyyRusc8LsXtROIQ",
+        "alias": "bowl-k-poke-and-roll-san-jose",
+        "name": "Bowl K Poke & Roll",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/N-afOoFppqVv9khkTEB8Rw/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/bowl-k-poke-and-roll-san-jose?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 121,
+        "categories": [
+            {
+                "alias": "japanese",
+                "title": "Japanese"
+            },
+            {
+                "alias": "poke",
+                "title": "Poke"
+            }
+        ],
+        "rating": 5.0,
+        "coordinates": {
+            "latitude": 37.341282974568266,
+            "longitude": -121.8402769
+        },
+        "transactions": [],
+        "price": "$$",
+        "location": {
+            "address1": "1780 Story Rd",
+            "address2": "Unit 20",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95122",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "1780 Story Rd",
+                "Unit 20",
+                "San Jose, CA 95122"
+            ]
+        },
+        "phone": "+14087703978",
+        "display_phone": "(408) 770-3978",
+        "distance": 4826.187577563868
+    },
+    {
+        "id": "IClEA0yADQ42Tubum8mkVw",
+        "alias": "kensho-social-san-jose-2",
+        "name": "Kensho Social",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/A8F7sqKPrp9O12B11Z4R8w/o.jpg",
+        "is_closed": false,
+        "url": "https://www.yelp.com/biz/kensho-social-san-jose-2?adjust_creative=vEfoDX5r6T0E1sLiCqXqfA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=vEfoDX5r6T0E1sLiCqXqfA",
+        "review_count": 360,
+        "categories": [
+            {
+                "alias": "coffee",
+                "title": "Coffee & Tea"
+            },
+            {
+                "alias": "ramen",
+                "title": "Ramen"
+            }
+        ],
+        "rating": 4.5,
+        "coordinates": {
+            "latitude": 37.33080962478547,
+            "longitude": -121.85831423829254
+        },
+        "transactions": [
+            "pickup"
+        ],
+        "price": "$$",
+        "location": {
+            "address1": "919 Story Rd",
+            "address2": "Ste 1100",
+            "address3": "",
+            "city": "San Jose",
+            "zip_code": "95122",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "919 Story Rd",
+                "Ste 1100",
+                "San Jose, CA 95122"
+            ]
+        },
+        "phone": "+14087537789",
+        "display_phone": "(408) 753-7789",
+        "distance": 2852.389734442333
+    }
+]

@@ -361,12 +361,12 @@ img{
     }
 
       .fa-star.checked{
-        color: pink;
+        color: rgb(237, 255, 248);
         /* border: solid 1px black; */
       }
     .photos{
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 230px;
+        max-height: 270px;
         overflow: auto;
     }
     .map, #map{
@@ -386,6 +386,38 @@ img{
         /* flex: 3 1 0; */
         
     }
+.info-box{
+    display: flex;
+    background-color: rgb(225, 195, 195);
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(195, 194, 194, 0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 800px;
+	max-width: 100%;
+	min-height: 200px;
+    overflow: auto;
+    margin: 20px;
+}
 
-
- 
+ .movies-container{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* max-width: 10px; */
+ }
+ .movie{
+    margin: auto;
+    padding: 30px;
+    
+    justify-content: space-between;
+    box-shadow: 0 14px 28px rgba(195, 194, 194, 0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+ }
+ .movie-title{
+    max-width: 150px;
+ }
+ .movie-img{
+    margin-top: 30px;
+ }

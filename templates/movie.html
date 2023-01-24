@@ -1,12 +1,46 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}TITLE HERE{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/css.css">
+    <nav class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        
+        
+    </nav>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+        
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
 
-{% block title %}Welcome{% endblock %}
 
-{% block content %}
-<div class = "wrapper2" >
-    <div>
-       <h1> here are some movies near the area</h1>
-   </div>
+</head>
+<body>
+    <div class = "wrappegr2" >
+        <div>
+           <h1> here are some movies near the area</h1>
+           <div class = "movies-container">
+            {%for movie in movies %}
+                <div class = "movie">      
+                    <img class="movie-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2{{movies[movie]['img']}}" alt="">
+                    <h4 class="movie-title">{{movies[movie]["title"]}}</h4>  
+                    <p>{{movies[movie]['release_date']}}</p>
 
+                </div>
+            {%endfor%}  
+       </div>  
+</body>
 
-{% endblock %}
+</html>
+

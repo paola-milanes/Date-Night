@@ -8,34 +8,49 @@
 {% block content %}
 
 <div class = "wrapper" >
+
    <div class = "place">
-    <h1> here are some restaurants in {{location}}</h1>
-    {% for place in places%}
-        <p>{{places[place]["name"]}}</p>
-    <div class="photos">
-        {% for photo in places[place]["img"]%}
-            <img src="{{photo}}" alt="{{photo}}"> 
+        <h1> here are some restaurants in {{location}}</h1>
+        {% for place in places%}
+         <div class = "info-box">
+            <div class="photos">
+            
+                {% for photo in places[place]["img"]%}
+                    <img src="{{photo}}" alt="{{photo}}"> 
+                {% endfor%}
+        </div>
+        <div class = 'information'>
+            <h3>{{places[place]["name"]}}</h3>
+        {% for num in range(places[place]["rating"]|int)%}
+            <span class="fa fa-star checked"></span>
         {% endfor%}
-    </div>
-    <!-- <p>{{places[place]["name"]}}</p> -->
-    <p>{{places[place]["city"]}}, {{places[place]["state"]}} </p>
-    {% for num in range(places[place]["rating"]|int)%}
-        <span class="fa fa-star checked"></span>
-    {% endfor%}
-    {% for i in  range(5 - places[place]["rating"]|int) %}
-        <span class="fa fa-star"></span> (<small>{{places[place]["rvw count"]}}</small>)
-    {% endfor %}
+        {% for i in  range(5 - places[place]["rating"]|int) %}
+        
+            <span class="fa fa-star"></span> (<small>{{places[place]["rvw count"]}}</small>)
+        {% endfor %}
+       
+        
+                <!-- <h5>Phone number:    </h5> -->
+            {% if places[place]["phone"] != ''%}
+                <h5>Phone number: {{places[place]["phone"]}}   </h5>
+            
+                <a href="tel:{{places[place]['phone']}}"  class="btn btn-outline-success btn-sm"> Call Now <span class="fa fa-phone "></span></a>
+        {% endif %}
+    
+    
+        <!-- <p>{{places[place]["phone"]}}</p> -->
+    
+        {% if places[place]["closed"] == False %}
+        <p>Open </p>
+        {% else %}
+        <p> Closed</p>
+        {% endif %}
+    
+        </div>
+      
+         </div>
 
-    <p>{{places[place]["phone"]}}</p>
 
-    {% if places[place]["closed"] == False %}
-    <p>Open </p>
-    {% else %}
-    <p> Closed</p>
-    {% endif %}
-
-
-  
     {%endfor%}
 
 

@@ -1,8 +1,12 @@
 from flask import Flask, session, render_template, request, flash, redirect
 import crud 
+from PIL import Image
 from model import connect_to_db, db
+import fandango
 import yelp
+from datetime import datetime
 import json
+
 app = Flask(__name__)
 app.secret_key = "SECRETSECRETSECRET"
 
@@ -60,7 +64,7 @@ def homepage1():
 def homepage2():
     name = session["name"]
     session["location"]= request.form.get("location")
-    print(session["location"])
+    # print(session["location"])
     return render_template("homepage.html", name=name)
 
 
@@ -187,11 +191,23 @@ def restaurant():
 
     return render_template("restaurant.html", places = session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat)
 
-@app.route("/movies")
+@app.route("/Movies", methods = ["POST"])
 def movies():
     """"movies palying in the area"""
+    session['list'] = {}
+    movies = fandango.get_movies()
 
-    return render_template("movie.html")
+    for movie in movies["results"]:
+        # print(movie['original_title'])
+        
+        session["list"][movie['id']]= {}
+        session["list"][movie['id']]["title"]= movie["original_title"]
+        session["list"][movie['id']]["img"]= movie["poster_path"]
+        session["list"][movie['id']]["vote"]= movie["vote_average"]
+        session["list"][movie['id']]["release_date"]= movie["release_date"]
+        datetime_object = datetime.strptime(session["list"][movie['id']]["release_date"], '%Y-%m-%d').date()
+        session["list"][movie['id']]["release_date"]= datetime_object.strftime("%B, %d %Y")
+    return render_template("movie.html", movies = session['list'])
 
 
 @app.route("/bars", methods = ["POST"])
@@ -202,7 +218,7 @@ def bars():
     location = session['location']
     locations = []
     bars = yelp.find_business(session['term'], location=location)
-    print(bars)
+    # print(bars)
 
     if 'businesses' not in bars:
         flash('invalid City, Please try again')

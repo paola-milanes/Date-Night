@@ -1,25 +1,40 @@
 {% extends 'base.html' %}
 
+
+
+
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-<div class = "wrapper" >
-    <div>
-           <h1> here are some parks in {{location}}</h1>
-           {% for place in session["list"]%}
 
-           <img src='{{places[place]["img"]}}'alt='{{places[place]["name"]}}''>
-           
-           <p>{{places[place]["name"]}}</p>
-           <p>{{places[place]["city"]}}, {{places[place]["state"]}}</p>
-           <p>{{places[place]["state"]}}</p>
-           <!-- <img src='{{places[place]["img"]}}'alt='{{places[place]["name"]}}''> -->
-           <p>{{places[place]["rvw count"]}}</p>
-           <p>{{places[place]["rating"]}}</p>
-           <p>{{places[place]["phone"]}}</p>
-           <p>{{places[place]["closed"]}}</p>
-           
-                
-           {%endfor%}
+<div class = "wrapper" >
+   <div class = "place">
+    <h1> here are some parks in {{location}}</h1>
+    {% for place in places%}
+        <p>{{places[place]["name"]}}</p>
+    <div class="photos">
+        {% for photo in places[place]["img"]%}
+            <img src="{{photo}}" alt="{{photo}}"> 
+        {% endfor%}
+    </div>
+    <!-- <p>{{places[place]["name"]}}</p> -->
+    <p>{{places[place]["city"]}}, {{places[place]["state"]}} </p>
+    {% for num in range(places[place]["rating"]|int)%}
+        <span class="fa fa-star checked"></span>
+    {% endfor%}
+    {% for i in  range(5 - places[place]["rating"]|int) %}
+        <span class="fa fa-star"></span> (<small>{{places[place]["rvw count"]}}</small>)
+    {% endfor %}
+
+    <p>{{places[place]["phone"]}}</p>
+    <p>{{places[place]["closed"]}}</p>
+    
+        
+    {%endfor%}
+
+</div>
+
+
+</div>
 
 {% endblock %}

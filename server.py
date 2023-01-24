@@ -71,6 +71,8 @@ def picnic():
     session["term"] = request.form.get('term')
     print(session["term"])
     location = session["location"]
+    locations = []
+
     parks = yelp.find_business(session["term"], location = location)
     
     if 'businesses' not in parks:
@@ -79,13 +81,14 @@ def picnic():
 
     else:
         for place in parks['businesses']:
+            picnic_by_id = yelp.search_by_id(place["id"])
            
             session['list'][place['id']] = {}
             session['list'][place['id']]['name'] =[place][0]["name"]
             session['list'][place['id']]['id'] =[place][0]["id"]
             session['list'][place['id']]['city'] =[place][0]["location"]['city']
             session['list'][place['id']]['state'] =[place][0]["location"]['state']
-            session['list'][place['id']]['img'] =[place][0]['image_url']
+            session['list'][place['id']]['img'] =picnic_by_id["photos"]
             session['list'][place['id']]['rvw count'] =[place][0]['review_count']
             session['list'][place['id']]['rating'] =[place][0]['rating']
             session['list'][place['id']]['categories'] =[place][0]['categories']
@@ -95,9 +98,13 @@ def picnic():
             session['list'][place['id']]['closed'] =[place][0]['is_closed']
             session['list'][place['id']]['price'] =[place][0].get('price','Not available')
             # print(session['list'])
-            
+            locations.append([place][0]['coordinates'])
+            print(locations)
 
-    return render_template("picnic.html", parks = parks,  places = session['list'],location = session['location'])
+            
+            lon =  -121.901284
+            lat = 37.308203
+    return render_template("picnic.html", parks = parks,  places = session['list'],location = session['location'],cordinates = locations, lon = lon, lat = lat)
 
 # @app.route("/restaurant", methods = ["POST"])
 # def restaurant():
@@ -144,6 +151,7 @@ def restaurant():
     session["term"] = request.form.get('term')
     # print(session["term"])
     location = session["location"]
+    locations = []
     restaurant = yelp.find_business(session["term"], location = location)
     if 'businesses' not in restaurant:
         flash('invalid City, Please try again')
@@ -152,7 +160,7 @@ def restaurant():
     else:
         for place in restaurant['businesses']:
             restaurant_by_id = yelp.search_by_id(place["id"])
-            print(restaurant_by_id["photos"])
+            # print(restaurant_by_id["photos"])
 
 
             session['list'][place['id']] = {}
@@ -171,9 +179,13 @@ def restaurant():
             session['list'][place['id']]['closed'] =[place][0]['is_closed']
             session['list'][place['id']]['price'] =[place][0].get('price','Not available')
             # print(session['list'])
-            print(session['list'][place['id']]['img'])
+            # print(session['list'][place['id']]['img'])
+            locations.append([place][0]['coordinates'])
+            lon =  -121.901284
+            lat = 37.308203
+            # print(locations)
 
-    return render_template("restaurant.html", places = session['list'],location = session['location'])
+    return render_template("restaurant.html", places = session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat)
 
 @app.route("/movies")
 def movies():
@@ -188,6 +200,7 @@ def bars():
     session['list'] = {}
     session["term"] = request.form.get('term')
     location = session['location']
+    locations = []
     bars = yelp.find_business(session['term'], location=location)
     print(bars)
 
@@ -197,13 +210,14 @@ def bars():
 
     else:
         for place in bars['businesses']:
+            place_by_id = yelp.search_by_id(place["id"])
             # print("THIS IS PLACES", restaurant['businesses'])
             session['list'][place['id']] = {}
             session['list'][place['id']]['name'] =[place][0]["name"]
             session['list'][place['id']]['id'] =[place][0]["id"]
             session['list'][place['id']]['city'] =[place][0]["location"]['city']
             session['list'][place['id']]['state'] =[place][0]["location"]['state']
-            session['list'][place['id']]['img'] =[place][0]['image_url']
+            session['list'][place['id']]['img'] =place_by_id["photos"]
             session['list'][place['id']]['rvw count'] =[place][0]['review_count']
             session['list'][place['id']]['rating'] =[place][0]['rating']
             session['list'][place['id']]['categories'] =[place][0]['categories']
@@ -212,10 +226,13 @@ def bars():
             session['list'][place['id']]['cordinates'] =[place][0]['coordinates']
             session['list'][place['id']]['closed'] =[place][0]['is_closed']
             session['list'][place['id']]['price'] =[place][0].get('price','Not available')
-            print(session['list'])
-
+            # print(session['list'])
+            locations.append([place][0]['coordinates'])
+            lon =  -121.901284
+            lat = 37.308203
+            # print(locations)
         
-    return render_template("bars.html", bars = bars, places =session['list'],location = session['location'] )
+    return render_template("bars.html", bars = bars, places =session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat )
 
 @app.route("/museums", methods = ["POST"])
 def musseums():
@@ -233,13 +250,14 @@ def musseums():
 
     else:
         for place in musseums['businesses']:
+            place_by_id = yelp.search_by_id(place["id"])
             # print("THIS IS PLACES", restaurant['businesses'])
             session['list'][place['id']] = {}
             session['list'][place['id']]['name'] =[place][0]["name"]
             session['list'][place['id']]['id'] =[place][0]["id"]
             session['list'][place['id']]['city'] =[place][0]["location"]['city']
             session['list'][place['id']]['state'] =[place][0]["location"]['state']
-            session['list'][place['id']]['img'] =[place][0]['image_url']
+            session['list'][place['id']]['img'] =place_by_id["photos"]
             session['list'][place['id']]['rvw count'] =[place][0]['review_count']
             session['list'][place['id']]['rating'] =[place][0]['rating']
             session['list'][place['id']]['categories'] =[place][0]['categories']

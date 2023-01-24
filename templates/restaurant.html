@@ -6,9 +6,9 @@
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-<div class = "box">
+
 <div class = "wrapper" >
-   <div>
+   <div class = "place">
     <h1> here are some restaurants in {{location}}</h1>
     {% for place in places%}
         <p>{{places[place]["name"]}}</p>
@@ -27,49 +27,24 @@
     {% endfor %}
 
     <p>{{places[place]["phone"]}}</p>
-    <p>{{places[place]["closed"]}}</p>
-    
-        
+
+    {% if places[place]["closed"] == False %}
+    <p>Open </p>
+    {% else %}
+    <p> Closed</p>
+    {% endif %}
+
+
+  
     {%endfor%}
-</div>
-</div>
-
-<div>
-    
-</div>
-
-<!-- <div id = 'map_side'>
-    <section class = 'map'>
-        <div id='map'></div>
-    </section>
-    
-    <div id="sidebar"></div>
-    <div id = 'dir'></div>
-</div>
 
 
-<script src="/static/js/maps.js"></script>
-<script
-     async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6RD6DyM1gAfngaDFhVxdTSHovyuacjZA&callback=initMap">
-</script> -->
+</div>
+
 
 </div>
 
     
-                
-            
-                  
-                
-        
-
-    
-
-
-    
-   
-
-
 
 
 

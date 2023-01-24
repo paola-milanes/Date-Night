@@ -1,8 +1,31 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}TITLE HERE{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/css.css">
+    <nav class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        
+        
+    </nav>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+        
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
 
-{% block title %}Welcome{% endblock %}
 
-{% block content %}
+</head>
 <div class = "wrapper">
 <div>
         <h1 class = "title">Date Night</h1>  
@@ -46,8 +69,9 @@
 		</div>
 	</div>
 </div>
+<script src="/static/js/style.js"></script>
 </div>
-<!-- 
+
 <footer>
 	<p>
 		Created with <i class="fa fa-heart"></i> by
@@ -55,6 +79,5 @@
 		- Read how I created this and how you can join the challenge
 		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
 	</p>
-</footer> -->
+</footer>
 
-{% endblock %}

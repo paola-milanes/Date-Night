@@ -30,7 +30,9 @@
 
 <div class = "box">
     {% block content %}CONTENT HERE{% endblock %}
-
+    <script>
+        const locations = []
+    </script>
     <div id = 'map_side'>
         <section class = 'map'>
             <div id='map'></div>
@@ -40,7 +42,19 @@
         <div id = 'dir'></div>
     </div>
     
-    
+    <script>
+        let cordinates1 = {{cordinates|tojson }};
+       for (let i = 0; i < cordinates1.length; i++) {
+        locations.push(cordinates1[i])
+}
+console.log(locations)
+    </script>
+    <script>
+                
+                let longitude = {{lon}};
+                let latitude = {{lat}};
+        </script>
+
     <script src="/static/js/maps.js"></script>
     <script
          async

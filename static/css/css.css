@@ -3,8 +3,9 @@
 /* * {
 	box-sizing: border-box;
 } */
-
-
+.place{
+    max-height: 740px;
+}
 .wrapper {
 	/* background: #f6f5f7; */
     background: rgb(255, 231, 231);
@@ -13,7 +14,7 @@
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 740px;
+
     overflow: auto;
 	/* margin: -20px 0 50px; */
     flex: 3 1 0;
@@ -379,7 +380,8 @@ img{
 
     .box{
         display: flex;
-        height: 740px;
+        /* height: 740px; */
+        /* overflow:auto; */
         /* float: right; */
         /* flex: 3 1 0; */
         

@@ -20,19 +20,12 @@
                 {% endfor%}
         </div>
         <div class = 'information'>
-            <h3>{{places[place]["name"]}}</h3>
-        {% for num in range(places[place]["rating"]|int)%}
-            <span class="fa fa-star checked"></span>
-        {% endfor%}
-        {% for i in  range(5 - places[place]["rating"]|int) %}
-        
-            <span class="fa fa-star"></span> (<small>{{places[place]["rvw count"]}}</small>)
-        {% endfor %}
-       
-        
-                <!-- <h5>Phone number:    </h5> -->
+            <div class="place-title">
+            <h3 >{{places[place]["name"]}}</h3>
+        </div>
+   
             {% if places[place]["phone"] != ''%}
-                <h5>Phone number: {{places[place]["phone"]}}   </h5>
+                <p class="phone">Phone number: <i>{{places[place]["phone"]}} </i></p>
             
                 <a href="tel:{{places[place]['phone']}}"  class="btn btn-outline-success btn-sm"> Call Now <span class="fa fa-phone "></span></a>
         {% endif %}
@@ -41,16 +34,27 @@
         <!-- <p>{{places[place]["phone"]}}</p> -->
     
         {% if places[place]["closed"] == False %}
-        <p>Open </p>
+        <p>Currently: <i>Open</i>  </p>
         {% else %}
-        <p> Closed</p>
+        <p>Currently: Closed</p>
         {% endif %}
-    
+        {% for num in range(places[place]["rating"]|int)%}
+        <span class="fa fa-star checked"></span>
+    {% endfor%}
+
+        {% for i in  range(5 - places[place]["rating"]|int) %}
+
+            <span class="fa fa-star"></span> 
+        {% endfor %}
+        (<small>{{places[place]["rvw count"]}}</small>)
+        <div>
+        <a href="/favorites"> add to favorites</a>
+        </div>
         </div>
       
          </div>
 
-
+         <!-- <button> <a href="/favorites"> add to favorites</a></button> -->
     {%endfor%}
 
 

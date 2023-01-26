@@ -18,7 +18,7 @@ def create_user(fname,lname, email, password):
     
 def find_user(email):
     user = User.query.filter(User.email == email).first()
-    print(user)
+    print(user.fname)
     return user
 
 def create_suggestions(name, details, types):
@@ -62,3 +62,19 @@ if __name__ == "__main__":
     #     db.session.commit()
     #     print(User.query.first())
 
+def update_info(user_id, fname, lname, email):
+    user = db.session.query(User).filter(User.user_id == user_id).first()
+    user.fname = fname
+    user.lname = lname
+    user.email = email
+
+    db.session.commit()
+    return user
+
+def update_pass(user_id, new_pass):
+    user = db.session.query(User).filter(User.user_id == user_id).first()
+    
+    user.password = new_pass
+    db.session.commit()
+
+    return user

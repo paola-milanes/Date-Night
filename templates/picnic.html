@@ -8,33 +8,61 @@
 {% block content %}
 
 <div class = "wrapper" >
+
    <div class = "place">
-    <h1> here are some parks in {{location}}</h1>
-    {% for place in places%}
-        <p>{{places[place]["name"]}}</p>
-    <div class="photos">
-        {% for photo in places[place]["img"]%}
-            <img src="{{photo}}" alt="{{photo}}"> 
-        {% endfor%}
-    </div>
-    <!-- <p>{{places[place]["name"]}}</p> -->
-    <p>{{places[place]["city"]}}, {{places[place]["state"]}} </p>
-    {% for num in range(places[place]["rating"]|int)%}
+        <h1> here are some parks in {{location}}</h1>
+        {% for place in places%}
+         <div class = "info-box">
+            <div class="photos">
+            
+                {% for photo in places[place]["img"]%}
+                    <img src="{{photo}}" alt="{{photo}}"> 
+                {% endfor%}
+        </div>
+        <div class = 'information'>
+            <div class="place-title">
+            <h3 >{{places[place]["name"]}}</h3>
+        </div>
+   
+            {% if places[place]["phone"] != ''%}
+                <p class="phone">Phone number: <i>{{places[place]["phone"]}} </i></p>
+            
+                <a href="tel:{{places[place]['phone']}}"  class="btn btn-outline-success btn-sm"> Call Now <span class="fa fa-phone "></span></a>
+        {% endif %}
+    
+    
+        <!-- <p>{{places[place]["phone"]}}</p> -->
+    
+        {% if places[place]["closed"] == False %}
+        <p>Currently: <i>Open</i>  </p>
+        {% else %}
+        <p>Currently: Closed</p>
+        {% endif %}
+        {% for num in range(places[place]["rating"]|int)%}
         <span class="fa fa-star checked"></span>
     {% endfor%}
-    {% for i in  range(5 - places[place]["rating"]|int) %}
-        <span class="fa fa-star"></span> (<small>{{places[place]["rvw count"]}}</small>)
-    {% endfor %}
 
-    <p>{{places[place]["phone"]}}</p>
-    <p>{{places[place]["closed"]}}</p>
+        {% for i in  range(5 - places[place]["rating"]|int) %}
+
+            <span class="fa fa-star"></span> 
+        {% endfor %}
+        (<small>{{places[place]["rvw count"]}}</small>)
     
-        
+        </div>
+      
+         </div>
+
+
     {%endfor%}
 
+
 </div>
 
 
 </div>
+
+    
+
+
 
 {% endblock %}

@@ -7,12 +7,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>{% block title %}TITLE HERE{% endblock %}</title>
     <link rel="stylesheet" href="/static/css/css.css">
-    <nav class="topnav">
-        <a class="active" href="/homepage">Home</a>
-        <a href="#about">About</a>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <div class = "main-nav">
+        <div class = "plant">
         
+        </div>
+        <div class= "nave-title">
+        <h1 >DateNight</h1>
+        </div>
+        <div class = "plant"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+        <!-- <span class="navbar-brand mb-0 h1"><big>Support the locals</big> <small><sup>5000</sup></small></span> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          {% if 'email' in session%}
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/homepage">Home <i class="fa fa-home" aria-hidden="true"></i></a>
+              </li>
+     
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/favorite_places">Favorites <i class="fa fa-heart" aria-hidden="true"></i></a>
+              </li> -->
+            </ul>
+          </div>
+          <!-- <a class="nav-link" href="/logout">Log out</a> -->
+            {% else %}
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <a class="nav-link" href="/">Create account</a>
+            </div>
+            
+            <!-- <a class="nav-link" href="/login">Log in</a> -->
+          {% endif%}
         
-    </nav>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-user-o" aria-hidden="true"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+
+          {% if 'email' in session%}          
+          <li><a class="dropdown-item" href="/manage"><i class="fa fa-cog" aria-hidden="true"></i> Manage Account</a></li>
+          <li><a class="dropdown-item" href="/favorites"> <i class="fa fa-heart" aria-hidden="true"></i> Favorites</a></li>
+
+
+          <li><a class="dropdown-item" href="/logout">Log out</a></li>
+
+          {% else %}
+
+          <li><a class="dropdown-item" href="/login">Log in</a></li>
+
+          {% endif%}
+        </ul>
+
+      </div>
+
+</div>
+      </nav>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
         <ul class=flashes>
@@ -47,7 +103,7 @@
        for (let i = 0; i < cordinates1.length; i++) {
         locations.push(cordinates1[i])
 }
-console.log(locations)
+// console.log(locations)
     </script>
     <script>
                 
@@ -63,7 +119,7 @@ console.log(locations)
     
     </div>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -17,26 +17,37 @@ function initMap() {
         lat: latitude,
         lng: longitude,
     };
+
+        // let title = title2
+        
+    
     const basicMap = new google.maps.Map(document.querySelector('#map'), {
         center: Places,
         zoom: 11.5,
     });
     const markers = [];
+    let i = 0
     for (const location of locations) {
         let Place = {
         lat: location['latitude'],
-        lng: location['longitude'],
+        lng: location['longitude'], 
     };
+    let title = location_name[i]
+    // for (const title of names_list){
+    //     let title = title["names"]
+    // }
+//    
       markers.push(
         new google.maps.Marker({
           position: Place,
-        //   title: location.name,
+          title: title,
           map: basicMap,
       icon: {
             url: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png"
         }
         }),
       );
+      i += 1
     }
   
     for (const marker of markers) {

@@ -16,7 +16,7 @@ def find_business(term, location):
     payload = {
         "term": term,
         "location": location,
-        'limit': 10,
+        'limit': 15,
     }
     response = requests.get(url, headers=HEADER, params=payload)
     res = response.json()

@@ -86,9 +86,25 @@
 
 <div class = "box">
     {% block content %}CONTENT HERE{% endblock %}
+    <!-- <div class = 'map-method'>
+        <section class = 'method' >
+            <label for="mode"> <h5>Mode of travel:</h5> </label>
+            <select id="mode">
+                <option value="DRIVING">Driving</option>
+                <option value="WALKING">Walking</option>
+                <option value="BICYCLING">Bicycling</option>
+                <option value="TRANSIT">Transit</option>
+            </select><br>
+            <button class = 'btn btn-outline-info btn-sm' id = 'directions'> Get Directions</button>
+        </section> -->
     <script>
         const locations = []
+
     </script>
+    <script>
+        const location_name = []
+    </script>
+ 
     <div id = 'map_side'>
         <section class = 'map'>
             <div id='map'></div>
@@ -103,13 +119,24 @@
        for (let i = 0; i < cordinates1.length; i++) {
         locations.push(cordinates1[i])
 }
+
 // console.log(locations)
     </script>
+    <script>
+        let location_names1 = {{location_names|tojson }};
+        // console.log(location_names1)
+       for (let i = 0; i < location_names1.length; i++) {
+        location_name.push(location_names1[i])
+}
+console.log(location_name)
+    </script>
+
     <script>
                 
                 let longitude = {{lon}};
                 let latitude = {{lat}};
         </script>
+     
 
     <script src="/static/js/maps.js"></script>
     <script

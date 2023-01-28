@@ -28,7 +28,36 @@ class User(db.Model):
 
     def __repr__(self):
         return f'<User user_id={self.user_id} email={self.email}>'
+#Place
+# class Places(db.Model):
+#     __tablename__ = "places"
 
+#     place_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     place_ylp_id = db.Column(db.String(255), unique =True, nullable=False)
+#     name = db.Column(db.String(50), nullable=False)
+#     city = db.Column(db.String(50), nullable=False)
+#     zip_code = db.Column(db.Integer, nullable=False)
+#     address = db.Column(db.String(50), nullable=True)
+#     type = db.Column(db.String(50), nullable=False)
+#     img = db.Column(db.String, nullable=False)
+
+#     fav_place = db.relationship("User_fav_places", back_populates="place")
+# #name, lovation, cist , img 
+
+# #user-fav-Plce - middle table
+# class User_fav_places(db.Model):
+
+#     __tablename__ = "user_fav_places"
+
+#     fav_places_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     favorite_place_id = db.Column(db.Integer, db.ForeignKey("places.place_id"), nullable=False)
+#     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"), nullable=False)
+#     likes = db.Column(db.Boolean, default = True, nullable = False) #*make sure this is how you write it
+
+
+#     place = db.relationship("Places", back_populates="fav_place") #!
+#     user = db.relationship("User", back_populates="fav_place") #! 
+#usr
 class User_Suggestions(db.Model):
     """"middle class between user and siggestion- where users can save their favorite dates"""
     __tablename__ = "user_suggestions"

@@ -77,4 +77,27 @@ def update_pass(user_id, new_pass):
     user.password = new_pass
     db.session.commit()
 
+
     return user
+
+# def create_place(place_ylp_id, name, city, zip_code, address,type , img):
+
+#     place = Places(place_ylp_id = place_ylp_id,name = name, city = city, zip_code = zip_code, address = address, type = type, img = img)
+#     print('successfully added')
+#     db.session.add(place)#add it to sserver
+#     db.session.commit()
+
+#     return place
+    
+# def create_fav_place(favorite_place_id, user_id):
+#     fav_place = User_fav_places(favorite_place_id = favorite_place_id,user_id = user_id)
+#     print('successfully added place')
+#     db.session.add(fav_place)
+#     db.session.commit()
+#     return fav_place
+
+
+# def get_fav_by_user(user):
+#     fav = db.session.query(Places.name, Places.place_ylp_id, Places.city,Places.address,Places.type,Places.img, User_fav_places.likes,User_fav_places.created_at,User_fav_places.last_updated ).join(User_fav_places).filter(User_fav_places.favorite_place_id == Places.place_id).join(User).filter(user == User_fav_places.user_id).order_by(User_fav_places.last_updated.desc()).limit(20).all()
+
+#     return fav

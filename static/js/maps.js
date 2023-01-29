@@ -54,8 +54,7 @@ function initMap() {
       const markerInfo = `
         <h1>${marker.title}</h1>
         <p>
-          Located at: <code>${marker.position.lat()}</code>,
-          <code>${marker.position.lng()}</code>
+  
         </p>
       `;
   
@@ -65,9 +64,18 @@ function initMap() {
       });
   
       marker.addListener('click', () => {
+        // infoWindow.close(basicMap);
         infoWindow.open(basicMap, marker);
+        setTimeout(()=>{
+            infoWindow.close();
+        },3000);
+
       });
+  
     }
+    // setTimeout(()=>{
+    //     infoWindow.close();
+    // },300);
   
     // const Place = {
     //     lat: latitude,

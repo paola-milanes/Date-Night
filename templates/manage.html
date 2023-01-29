@@ -9,25 +9,28 @@
     <link rel="stylesheet" href="/static/css/css.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- <nav class="topnav">
-        <a class="active" href="/homepage">Home</a>
+    <div class = "main-nav">
+        <div class = "plant">
         
-
-        
-    </nav> -->
+        </div>
+        <div class= "nave-title">
+        <h1 >DateNight</h1>
+        </div>
+        <div class = "plant"></div>
+    </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
         <!-- <span class="navbar-brand mb-0 h1"><big>Support the locals</big> <small><sup>5000</sup></small></span> -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          
           {% if 'email' in session%}
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/homepage">Home <i class="fa fa-home" aria-hidden="true"></i></a>
               </li>
+     
               <!-- <li class="nav-item">
                 <a class="nav-link" href="/favorite_places">Favorites <i class="fa fa-heart" aria-hidden="true"></i></a>
               </li> -->
@@ -81,7 +84,7 @@
 </head>
 
 <body class="text-center">
-    <div class = 'container'>
+    <div class = 'container4'>
     <h2>Profile</h2><br>
 
 <div class="row">
@@ -93,7 +96,7 @@
     <h5>Would you like to update your profile information?</h5><br>
 
     <div id='information-form'>
-        <form action="/updateinfo" method="POST"> 
+        <form class = "updateinfo" action="/updateinfo" method="POST"> 
         <div class="col-md-12">    
             <label for="first_name">First Name:</label>
             <input value = '{{user.fname}}' class="form-control" type="text" name="first_name" id ="first_name" required>
@@ -117,7 +120,7 @@
 
         <div id='pass-form'>
 
-        <form action='/updatepassword' method="POST"> 
+        <form class = "updateinfo" action='/updatepassword' method="POST"> 
 
 
         <div class="col-md-12">

@@ -128,6 +128,7 @@ class Location(db.Model):
     state = db.Column(db.String, nullable = False)
     zipcode = db.Column(db.Integer, nullable = False)
     sug_id = db.Column(db.Integer, db.ForeignKey('suggestions.sug_id'))
+    
 
 
     sugg = db.relationship('Suggestion', back_populates = 'location')

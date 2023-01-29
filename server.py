@@ -59,9 +59,9 @@ def homepage1():
     """Show options"""
 
     name = session["name"]
-    session["location"]= request.form.get("location")
-    print(session["location"])
-    return render_template("homepage.html", name=name)
+    location = session.get("location")
+    print(location)
+    return render_template("homepage.html", name=name, location=location)
 
 
 @app.route("/homepage", methods = ["post"])
@@ -79,6 +79,7 @@ def picnic():
     session["term"] = request.form.get('term')
     # print(session["term"])
     location = session["location"]
+    location_names = []
     locations = []
 
     parks = yelp.find_business(session["term"], location = location)
@@ -107,12 +108,13 @@ def picnic():
             session['list'][place['id']]['price'] =[place][0].get('price','Not available')
             # print(session['list'])
             locations.append([place][0]['coordinates'])
+            location_names.append([place][0]['name'])
             # print(locations)
 
             
             lon =  -121.901284
             lat = 37.308203
-    return render_template("picnic.html", parks = parks,  places = session['list'],location = session['location'],cordinates = locations, lon = lon, lat = lat)
+    return render_template("picnic.html", parks = parks,  places = session['list'],location = session['location'],cordinates = locations, lon = lon, lat = lat, location_names = location_names)
 
 @app.route("/bowling", methods =["POST"] )
 def bowling():
@@ -121,6 +123,7 @@ def bowling():
     session["term"] = request.form.get('term')
     # print(session["term"])
     location = session["location"]
+    location_names = []
     locations = []
 
     bowling = yelp.find_business(session["term"], location = location)
@@ -149,13 +152,11 @@ def bowling():
             session['list'][place['id']]['price'] =[place][0].get('price','Not available')
             # print(session['list'])
             locations.append([place][0]['coordinates'])
-            # print(locations)
-
-            
+            location_names.append([place][0]['name'])
             lon =  -121.901284
             lat = 37.308203
             
-    return render_template("bowling.html", bowling = bowling,  places = session['list'],location = session['location'],cordinates = locations, lon = lon, lat = lat)
+    return render_template("bowling.html", bowling = bowling,  places = session['list'],location = session['location'],cordinates = locations, lon = lon, lat = lat, location_names = location_names)
 
 
 @app.route("/hiking", methods = ["POST"])
@@ -165,7 +166,7 @@ def hiking():
     session["term"] = request.form.get('term')
     # print(session["term"])
     location = session["location"]
-    # names = []
+    location_names = []
     locations = []
     hiking = yelp.find_business(session["term"], location = location)
     if 'businesses' not in hiking:
@@ -196,12 +197,12 @@ def hiking():
             # print(session['list'])
             # print(session['list'][place['id']]['img'])
             locations.append([place][0]['coordinates'])
-            # names.append([place][0]["name"])
+            location_names.append([place][0]['name'])
             lon =  -121.901284
             lat = 37.308203
             # print(locations)
 
-    return render_template("hiking.html", places = session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat)
+    return render_template("hiking.html", places = session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat, location_names = location_names)
 
 @app.route("/restaurant", methods = ["POST"])
 def restaurant():
@@ -244,9 +245,7 @@ def restaurant():
             location_names.append([place][0]['name'])
             lon =  -121.901284
             lat = 37.308203
-    # print(location_names)
-            # print(locations)
-    # data = json.loads(location_names)
+ 
     return render_template("restaurant.html", places = session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat, location_names = location_names)
 
 @app.route("/Movies", methods = ["POST"])
@@ -274,6 +273,7 @@ def bars():
     session['list'] = {}
     session["term"] = request.form.get('term')
     location = session['location']
+    location_names = []
     locations = []
     bars = yelp.find_business(session['term'], location=location)
     # print(bars)
@@ -302,11 +302,12 @@ def bars():
             session['list'][place['id']]['price'] =[place][0].get('price','Not available')
             # print(session['list'])
             locations.append([place][0]['coordinates'])
+            location_names.append([place][0]['name'])
             lon =  -121.901284
             lat = 37.308203
             # print(locations)
         
-    return render_template("bars.html", bars = bars, places =session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat )
+    return render_template("bars.html", bars = bars, places =session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat, location_names = location_names )
 
 @app.route("/museums", methods = ["POST"])
 def musseums():
@@ -314,6 +315,7 @@ def musseums():
     session['list'] = {}
     session["term"] = request.form.get('term')
     location = session["location"]
+    location_names = []
     locations = []
     # print(session['location'],"\n\n\n")
     musseums = yelp.find_business(session["term"], location = location)
@@ -343,6 +345,7 @@ def musseums():
             session['list'][place['id']]['price'] =[place][0].get('price','Not available')
             # print(session['list'])
             locations.append([place][0]['coordinates'])
+            location_names.append([place][0]['name'])
             lon =  -121.901284
             lat = 37.308203
             
@@ -350,7 +353,7 @@ def musseums():
 
      
 
-    return render_template("museums.html", musseums = musseums, places = session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat)
+    return render_template("museums.html", musseums = musseums, places = session['list'],location = session['location'], cordinates = locations,lon = lon, lat= lat,location_names = location_names)
 
 
 @app.route("/events")
@@ -374,14 +377,15 @@ def manage():
 @app.route('/updateinfo', methods = ['POST'])
 def updateinfo():
     logged_in_email = session.get('email')
-    user = crud.get_user_by_email(logged_in_email)
+    user = crud.find_user(logged_in_email)
+    
 
 
     fname = request.form['first_name']
     lname = request.form['last_name']
     email = request.form['email']
     session['email'] = email
-    session["first_name"] = fname.title()
+    session["name"] = fname.title()
 
 
     

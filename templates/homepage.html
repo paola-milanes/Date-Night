@@ -35,7 +35,7 @@
             </ul>
             <ul>
                 
-                    {%if session["location"] == None%}
+                    {%if location == None%}
                     <li>
                     <div class = "location-nav">
                     <form action="/homepage" class="location" method = "post">
@@ -115,7 +115,7 @@
 </head>
 
 <body>
-    {% if session["location"]== None  %}
+    {% if location== None  %}
     <div class = "Welcome-sign">
 <h1 class = "welcome"> Welcome {{name.title()}}, here are some date ideas </h1>
     </div>

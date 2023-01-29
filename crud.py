@@ -50,10 +50,7 @@ def create_location(city, state, zipcode):
    
     return location
 
-if __name__ == "__main__":
-    from server import app
 
-    connect_to_db(app, "date")
     # with app.app_context():
     #     db.drop_all()
     #     db.create_all() 
@@ -101,3 +98,9 @@ def update_pass(user_id, new_pass):
 #     fav = db.session.query(Places.name, Places.place_ylp_id, Places.city,Places.address,Places.type,Places.img, User_fav_places.likes,User_fav_places.created_at,User_fav_places.last_updated ).join(User_fav_places).filter(User_fav_places.favorite_place_id == Places.place_id).join(User).filter(user == User_fav_places.user_id).order_by(User_fav_places.last_updated.desc()).limit(20).all()
 
 #     return fav
+
+
+if __name__ == "__main__":
+    from server import app
+
+    connect_to_db(app, "date")
